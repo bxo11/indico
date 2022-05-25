@@ -38,7 +38,7 @@
 {% macro _side_menu_section(section) %}
     {% if section.items %}
         <li class="section {{ 'collapsed' if not section.active }}" data-section-name="{{ section.name }}">
-            <div class="title-wrapper">
+            <div class="title-wrapper" tabindex="0">
                 <span class="title {{ section.icon }} side-menu-label">{{ section.title }}</span>
             </div>
             <ul class="{{ 'weak-hidden' if not section.active }}">
@@ -73,12 +73,14 @@
             return 'side-menu-{{ menu_id }}-{0}-{1}'.format(userId, section.data('sectionName'));
         }
 
-        menu.find('.section .title-wrapper').on('click', function() {
-            var $this = $(this);
-            var section = $this.closest('.section');
-            $this.next('ul').slideToggle(300);
-            section.toggleClass('collapsed');
-            localStorage.setItem(getSectionKey(section), section.hasClass('collapsed'));
+        menu.find('.section .title-wrapper').on('click keypress', function() {
+            if (event.key === "Enter"|| event.type === 'click') {
+                var $this = $(this);
+                var section = $this.closest('.section');
+                $this.next('ul').slideToggle(300);
+                section.toggleClass('collapsed');
+                localStorage.setItem(getSectionKey(section), section.hasClass('collapsed'));
+            }
         });
 
         menu.find('.section').each(function() {
