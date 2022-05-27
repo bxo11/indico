@@ -122,18 +122,19 @@
                     <a class="i-button icon-copy" title="{% trans %}Clone event{% endtrans %}"
                        data-href="{{ url_for('event_management.clone', event) }}"
                        data-title="{% trans %}Clone Event{% endtrans %}"
-                       data-ajax-dialog>
+                       data-ajax-dialog
+                       href="#">
                         {% trans %}Clone{% endtrans %}
                    </a>
                     {% if clones %}
-                        <a id="event-action-menu-clones-target" class="i-button label clickable arrow">
+                        <a id="event-action-menu-clones-target" class="i-button label clickable arrow" href="#">
                             {{- clones|length -}}
                         </a>
                     {% endif %}
                 </div>
 
                 <a id="event-action-menu-actions-target" class="i-button icon-settings i-button arrow"
-                   title="{% trans %}Event actions{% endtrans %}"></a>
+                   title="{% trans %}Event actions{% endtrans %}" href="#"></a>
 
                 <div id="event-action-menu-actions">
                     <div class="action-menu-buttons {{ 'event-locked' if event.is_locked }}">

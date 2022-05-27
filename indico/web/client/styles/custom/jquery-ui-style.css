@@ -107,10 +107,6 @@
   background: none !important;
 }
 
-.ui-tabs a {
-  outline: none;
-}
-
 .ui-tabs .ui-tabs-nav li {
   padding: 0;
   outline: none;
