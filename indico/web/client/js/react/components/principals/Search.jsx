@@ -183,9 +183,14 @@ const searchFactory = config => {
 
     const hasAvatarClass = avatarURL ? 'has-avatar' : '';
 
+    const onKeyDownEvent = event=>{
+      if(event.key==="Enter"){
+        event.target.click();
+        }}
+    
     return (
-      <List.Item styleName="result-item" onClick={added ? onRemove : onAdd}>
-        <div styleName="item">
+      <List.Item styleName="result-item" onClick={added ? onRemove : onAdd} onKeyDown={onKeyDownEvent}>
+        <div styleName="item" tabIndex="0">
           <div styleName="icon">
             <Icon.Group size="large">
               {avatar}
