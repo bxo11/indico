@@ -154,7 +154,9 @@ export const PrincipalListItem = ({
               name="star"
               size="large"
               onClick={onDelFavorite}
+              onKeyDown={event=>{if(event.key==="Enter") event.target.click()}}
               disabled={disabled}
+              tabIndex={0}
             />
           ) : (
             <Icon
@@ -162,7 +164,9 @@ export const PrincipalListItem = ({
               name="star outline"
               size="large"
               onClick={onAddFavorite}
+              onKeyDown={event=>{if(event.key==="Enter") event.target.click()}}
               disabled={disabled}
+              tabIndex={0}
             />
           ))}
         {canDelete && (
@@ -171,7 +175,9 @@ export const PrincipalListItem = ({
             name="remove"
             size="large"
             onClick={onDelete}
+            onKeyDown={event=>{if(event.key==="Enter") event.target.click()}}
             disabled={disabled}
+            tabIndex={0}
           />
         )}
         {search}
