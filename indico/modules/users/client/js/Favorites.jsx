@@ -112,6 +112,8 @@ function FavoriteCatManager({userId}) {
                             styleName="delete-button"
                             name="close"
                             onClick={() => deleteFavoriteCat(cat.id)}
+                            onKeyDown={event=>{if(event.key==="Enter"){event.target.click();}}}
+                            tabIndex={0}
                             link
                           />
                         }
@@ -216,6 +218,8 @@ function FavoriteEventManager({userId}) {
                               styleName="delete-button"
                               name="close"
                               onClick={() => deleteFavoriteEvent(event.id)}
+                              onKeyPress={event=>{if(event.key==="Enter"){event.target.click();}}}
+                              tabIndex={0}
                               link
                             />
                           }
@@ -283,6 +287,8 @@ function FavoriteUserManager({userId}) {
                           styleName="delete-button"
                           name="close"
                           onClick={() => deleteFavoriteUser(user.userId)}
+                          onKeyDown={event=>{if(event.key==="Enter"){event.target.click();}}}
+                          tabIndex={0}
                           link
                         />
                       }

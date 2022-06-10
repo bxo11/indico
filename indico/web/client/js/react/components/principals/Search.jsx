@@ -434,7 +434,8 @@ const searchFactory = config => {
           content={buttonTitle}
           disabled={disabled}
           onClick={handleOpenClick}
-          onKeyDown={event=>{if(event.key==="Enter"){event.target.click();}}}
+          onKeyDown={event=>{if(event.key==="Enter"){event.target.click();
+}}}
         />
       );
     }
