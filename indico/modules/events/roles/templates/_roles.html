@@ -15,7 +15,7 @@
 
 {% macro render_role(role, collapsed=true, email_button=true) -%}
     <tr>
-        <td class="badge-column toggle-members">
+        <td class="badge-column toggle-members" tabindex="0">
             <span class="i-tag outline role-badge" style="{{ role.css }};">
                 {{- role.code -}}
             </span>

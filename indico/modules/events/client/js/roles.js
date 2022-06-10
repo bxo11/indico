@@ -12,13 +12,15 @@ import {showUserSearch} from 'indico/react/components/principals/imperative';
 (function(global) {
   function setupToggle() {
     const $roles = $('#event-roles');
-    $roles.on('click', '.toggle-members', function() {
+    $roles.on('click keydown', '.toggle-members', function(event) {
+      if (event.key === "Enter"|| event.type === 'click') {
       const $row = $(this)
         .closest('tr')
         .next('tr')
         .find('.slide');
       $row.css('max-height', `${$row[0].scrollHeight}px`);
       $row.toggleClass('open close');
+      }
     });
 
     $roles.on('indico:htmlUpdated', function() {
