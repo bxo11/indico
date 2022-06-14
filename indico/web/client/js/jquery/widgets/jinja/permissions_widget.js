@@ -296,8 +296,9 @@ import Palette from 'indico/utils/palette';
         'data-principal': JSON.stringify(principal),
       });
       const $itemContent = $('<a>');
+      $itemContent.attr('href', '#');
       if (principal._type === 'EventRole' || principal._type === 'CategoryRole') {
-        $itemContent.attr('href', '#');
+
         $itemContent.append(
           this._renderRoleCode(principal.code, principal.color).addClass('dropdown-icon')
         );
