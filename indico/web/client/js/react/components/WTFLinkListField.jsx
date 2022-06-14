@@ -120,6 +120,7 @@ function Link({onChange, onDelete, title, url}) {
           className="icon-remove remove-row"
           title={Translate.string('Remove row')}
           onClick={handleDelete}
+          href={'#'}
         />
       </td>
     </tr>

@@ -36,7 +36,7 @@ export default class Filter extends React.Component {
                   defaultChecked={filters[name]}
                   onChange={e => setFilter({[name]: e.target.checked})}
                 />
-                <label htmlFor={`realm-${name}`} className="i-button">
+                <label htmlFor={`realm-${name}`} className="i-button" tabIndex={'0'} onKeyDown={event=>{if(event.key==="Enter"){event.target.click();}}}>
                   {realms[name]}
                 </label>
               </React.Fragment>

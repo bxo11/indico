@@ -79,7 +79,7 @@ class LogEntry extends React.PureComponent {
           <span className="bold">{entry.module}</span>
         </span>
         <TooltipIfTruncated>
-          <span className="log-entry-description" onClick={() => this.openDetails(entry.index)}>
+          <span className="log-entry-description" onClick={() => this.openDetails(entry.index)} onKeyDown={event=>{if(event.key==="Enter"){event.target.click();}}} tabIndex={'0'}>
             {entry.description}
           </span>
         </TooltipIfTruncated>
