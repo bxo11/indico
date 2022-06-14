@@ -20,7 +20,8 @@
            data-href="{{ url_for('event_registration.' + endpoint, regform, template_id=tpl.id) }}"
            data-title="{{ print_title }}"
            data-method="POST"
-           data-ajax-dialog>
+           data-ajax-dialog
+           href="#">
         </a>
     {% else %}
         {% if no_registrations %}
