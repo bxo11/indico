@@ -124,7 +124,7 @@
                     <a class="i-button arrow highlight js-dropdown" data-toggle="dropdown" href="#">Filter role</a>
                     <ul class="i-dropdown">
                         {% if event.type != 'lecture' %}
-                            <li class="enabled">
+                            <li class="enabled" tabindex="0" onkeydown='if(event.key==="Enter"){event.target.click();}'>
                                 <input type="checkbox" id="filter-chairpersons" data-filter="chairperson">
                                 <i class="icon-checkmark"></i>
                                 <i class="icon-stop colored-square" style="color: #{{ builtin_roles.chairperson.color }};"></i>
@@ -132,20 +132,20 @@
                                     {%- trans %}Chairpersons{% endtrans -%}
                                 </label>
                             </li>
-                            <li class="enabled">
+                            <li class="enabled" tabindex="0" onkeydown='if(event.key==="Enter"){event.target.click();}'>
                                 <input type="checkbox" id="filter-speakers" data-filter="speaker">
                                 <i class="icon-checkmark"></i>
                                 <i class="icon-stop colored-square" style="color: #{{ builtin_roles.speaker.color }};"></i>
                                 <label for="filter-speakers">{% trans %}Speakers{% endtrans %}</label>
                             </li>
-                            <li class="enabled">
+                            <li class="enabled" tabindex="0" onkeydown='if(event.key==="Enter"){event.target.click();}'>
                                 <input type="checkbox" id="filter-conveners" data-filter="convener">
                                 <i class="icon-checkmark"></i>
                                 <i class="icon-stop colored-square" style="color: #{{ builtin_roles.convener.color }};"></i>
                                 <label for="filter-conveners">{% trans %}Conveners{% endtrans %}</label>
                             </li>
                             {% if event.has_feature('abstracts') %}
-                                <li class="enabled">
+                                <li class="enabled" tabindex="0" onkeydown='if(event.key==="Enter"){event.target.click();}'>
                                     <input type="checkbox" id="filter-abstract-author" data-filter="author">
                                     <i class="icon-checkmark"></i>
                                     <i class="icon-stop colored-square" style="color: #{{ builtin_roles.author.color }};"></i>
@@ -155,7 +155,7 @@
                                 </li>
                             {% endif %}
                         {% else %}
-                            <li class="enabled">
+                            <li class="enabled" tabindex="0" onkeydown='if(event.key==="Enter"){event.target.click();}'>
                                 <input type="checkbox" id="filter-lecture-speakers" data-filter="lecture_speaker">
                                 <i class="icon-checkmark"></i>
                                 <i class="icon-stop colored-square" style="color: #{{ builtin_roles.lecture_speaker.color }};"></i>
@@ -163,7 +163,7 @@
                             </li>
                         {% endif %}
                         {% for role_id, role_data in custom_roles.items() %}
-                            <li class="enabled">
+                            <li class="enabled" tabindex="0" onkeydown='if(event.key==="Enter"){event.target.click();}'>
                                 <input type="checkbox" id="filter-{{ role_id }}" data-filter="{{ role_id }}">
                                 <i class="icon-checkmark"></i>
                                 <i class="icon-stop colored-square" style="color: #{{ role_data.color }};"></i>
@@ -173,7 +173,7 @@
                         <li class="separator">
                             <span class="titled-rule">{% trans %}or{% endtrans %}</span>
                         </li>
-                        <li for="filter-no-account">
+                        <li for="filter-no-account" tabindex="0" onkeydown='if(event.key==="Enter"){event.target.click();}'>
                             <input type="checkbox" id="filter-no-account" data-filter="no_account">
                             <i class="icon-checkmark"></i>
                             <i class="icon-stop colored-square no-account"></i>
@@ -182,7 +182,7 @@
                         <li class="separator">
                             <span class="titled-rule">{% trans %}or{% endtrans %}</span>
                         </li>
-                        <li for="filter-no-registration">
+                        <li for="filter-no-registration" tabindex="0" onkeydown='if(event.key==="Enter"){event.target.click();}'>
                             <input type="checkbox" id="filter-no-registration" data-filter="no_registration">
                             <i class="icon-checkmark"></i>
                             <i class="icon-stop colored-square no-registration"></i>
@@ -191,7 +191,7 @@
                         <li class="separator">
                             <span class="titled-rule">{% trans %}or{% endtrans %}</span>
                         </li>
-                        <li for="filter-no-builtin-roles">
+                        <li for="filter-no-builtin-roles" tabindex="0" onkeydown='if(event.key==="Enter"){event.target.click();}'>
                             <input type="checkbox" id="filter-no-builtin-roles" data-filter="no_builtin_roles">
                             <i class="icon-checkmark"></i>
                             <i class="icon-stop colored-square no-builtin-roles"></i>
