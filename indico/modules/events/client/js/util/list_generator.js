@@ -5,6 +5,8 @@
 // modify it under the terms of the MIT License; see the
 // LICENSE file for more details.
 
+const { or } = require("ajv/dist/compile/codegen");
+
 /* global setupSearchBox:false, handleRowSelection:false, setupTableSorter:false, handleAjaxError:false */
 
 (function(global) {
@@ -72,7 +74,7 @@
       $filter.dropdown({selector: "a[data-toggle='dropdown']", relative_to: $filter});
       if (!hasColumnSelector || isOnlyFilter) {
         $filter.find('.title-wrapper').on('click keydown', function(evt) {
-          if (evt.key==="Enter"){
+          if (evt.key==="Enter" || evt.type==="click"){
           $filter.find("a[data-toggle='dropdown']").trigger('click');
           evt.stopPropagation();
           }
@@ -83,7 +85,8 @@
     colorizeActiveFilters();
     $('.list-filter-dialog .toolbar').dropdown();
 
-    $('.title-wrapper').on('click', function(evt) {
+    $('.title-wrapper').on('click keydown', function(evt) {
+      if (evt.key!="Enter" && evt.type!="click"){return;}
       if ($(evt.target).hasClass('filter')) {
         return;
       }

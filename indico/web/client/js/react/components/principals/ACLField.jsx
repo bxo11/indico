@@ -193,6 +193,11 @@ const ACLField = props => {
               selectOnNavigation={false}
               onOpen={onDropdownOpen}
               onChange={(e, data) => handleAddItems([{identifier: data.value}])}
+              onKeyDown={event => {
+                if (event.key === 'Enter') {
+                  event.target.click();
+                }
+              }}
             />
           )}
           {categoryRoles.length !== 0 && (
@@ -210,6 +215,11 @@ const ACLField = props => {
               selectOnNavigation={false}
               onOpen={onDropdownOpen}
               onChange={(e, data) => handleAddItems([{identifier: data.value}])}
+              onKeyDown={event => {
+                if (event.key === 'Enter') {
+                  event.target.click();
+                }
+              }}
             />
           )}
         </Button.Group>

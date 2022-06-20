@@ -53,6 +53,7 @@ const PersonListItem = ({
                 size="small"
                 color={active ? 'blue' : undefined}
                 onClick={() => onClickRole && onClickRole(idx, roles)}
+                href="#"
               >
                 {icon ? <Icon styleName="label-icon" name={icon} /> : label}
               </Label>
@@ -70,6 +71,12 @@ const PersonListItem = ({
         size="large"
         onClick={onEdit}
         disabled={disabled}
+        tabIndex={0}
+        onKeyDown={event => {
+          if (event.key === 'Enter') {
+            event.target.click();
+          }
+        }}
       />
       {canDelete && (
         <Icon
@@ -78,6 +85,12 @@ const PersonListItem = ({
           size="large"
           onClick={onDelete}
           disabled={disabled}
+          tabIndex={0}
+          onKeyDown={event => {
+            if (event.key === 'Enter') {
+              event.target.click();
+            }
+          }}
         />
       )}
     </div>

@@ -37,6 +37,12 @@ const PrincipalPermissions = ({
       circular
       styleName="permission-add-button"
       color={open ? 'blue' : null}
+      tabIndex={0}
+      onKeyDown={event => {
+        if (event.key === 'Enter') {
+          event.target.click();
+        }
+      }}
     />
   );
 
@@ -74,7 +80,16 @@ const PrincipalPermissions = ({
             <Label as="div" size="tiny" color={permissionMap[permission].color}>
               {permissionMap[permission].title}
               {!onlyDefault && (
-                <Icon name="close" onClick={() => !readOnly && onClickRemove(permission)} />
+                <Icon
+                  name="close"
+                  onClick={() => !readOnly && onClickRemove(permission)}
+                  tabIndex={0}
+                  onKeyDown={event => {
+                    if (event.key === 'Enter') {
+                      event.target.click();
+                    }
+                  }}
+                />
               )}
             </Label>
           }

@@ -215,6 +215,11 @@ function AddPrincipalDropdown({text, options, disabled, onChange}) {
       selectOnNavigation={false}
       value={null}
       onChange={(e, data) => onChange([{identifier: data.value}])}
+      onKeyDown={event => {
+        if (event.key === 'Enter') {
+          event.target.click();
+        }
+      }}
     />
   );
 }

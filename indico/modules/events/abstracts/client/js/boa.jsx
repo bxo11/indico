@@ -63,6 +63,12 @@ export default function CustomBOAModal({eventId, initialFile, hasLatex}) {
         className={`i-button ${initialFile ? 'icon-file-pdf' : 'icon-arrow-up'}`}
         style={{marginRight: '0.3rem'}}
         onClick={() => setModalOpen(true)}
+        onKeyPress={event => {
+          if (event.key === 'Enter') {
+            event.target.click();
+          }
+        }}
+        tabIndex={0}
       >
         {buttonLabel}
       </span>
