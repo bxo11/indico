@@ -71,9 +71,11 @@
       const isOnlyFilter = !!$filter.find('[data-only-filter]').length;
       $filter.dropdown({selector: "a[data-toggle='dropdown']", relative_to: $filter});
       if (!hasColumnSelector || isOnlyFilter) {
-        $filter.find('.title-wrapper').on('click', function(evt) {
+        $filter.find('.title-wrapper').on('click keydown', function(evt) {
+          if (evt.key==="Enter"){
           $filter.find("a[data-toggle='dropdown']").trigger('click');
           evt.stopPropagation();
+          }
         });
       }
     });

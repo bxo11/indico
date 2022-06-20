@@ -10,7 +10,7 @@
     {%- if event.type == 'conference' -%}
         <a id="contributions-settings-dropdown"
            class="i-button borderless icon-settings arrow js-dropdown"
-           data-toggle="dropdown">{% trans %}Settings{% endtrans %}</a>
+           data-toggle="dropdown" href="#">{% trans %}Settings{% endtrans %}</a>
         <ul class="i-dropdown">
             <li>
                 <a href="#"
@@ -66,7 +66,7 @@
     <div class="list-section">
         <div class="toolbars space-after">
             <div class="toolbar">
-                <a class="i-button icon-checkbox-checked arrow js-dropdown" data-toggle="dropdown"></a>
+                <a class="i-button icon-checkbox-checked arrow js-dropdown" data-toggle="dropdown" href="#"></a>
                 <ul class="i-dropdown">
                     <li>
                         <a href="#" data-select-all="#contribution-list input:checkbox">{% trans %}All{% endtrans %}</a>
@@ -108,7 +108,8 @@
                 <div class="group">
                     <a class="i-button js-enable-if-checked arrow disabled"
                        title="{% trans %}Export data{% endtrans %}"
-                       data-toggle="dropdown">
+                       data-toggle="dropdown"
+                       href="#">
                         {%- trans %}Export{% endtrans -%}
                     </a>
                     <ul class="i-dropdown">
@@ -152,7 +153,8 @@
                        title="{% trans %}Import contributions from CSV file{% endtrans %}"
                        data-href="{{ url_for('.contributions_import', event) }}"
                        data-title="{% trans %}Import contributions from CSV File{% endtrans %}"
-                       data-ajax-dialog>
+                       data-ajax-dialog
+                       href="#">
                         {%- trans %}Import{% endtrans -%}
                     </a>
                 </div>

@@ -4,7 +4,7 @@
     {% set filters = filters['items'] %}
     <div class="label-group list-column">
         <div class="i-label title-wrapper"
-             data-id="{{ item.personal_data_type.name if item.personal_data_type else item_id }}">
+             data-id="{{ item.personal_data_type.name if item.personal_data_type else item_id }}" tabindex="0">
             <div class="title">{{ item.title }}</div>
         </div>
         {% if item.filter_choices %}
@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="toolbar">
-            <a class="i-button js-reset-btn icon-close warning" type="button">
+            <a class="i-button js-reset-btn icon-close warning" type="button" href="#">
                 {%- trans %}Clear filters{% endtrans -%}
             </a>
         </div>
