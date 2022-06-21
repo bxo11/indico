@@ -205,7 +205,7 @@
                                          management=false) %}
     <div class="toolbars space-after">
         <div class="toolbar">
-            <a class="i-button icon-checkbox-checked arrow js-dropdown" data-toggle="dropdown"></a>
+            <a href="#" class="i-button icon-checkbox-checked arrow js-dropdown" data-toggle="dropdown"></a>
             <ul class="i-dropdown">
                 <li>
                     <a href="#" data-select-all="#assignment-list input:checkbox">{% trans %}All{% endtrans %}</a>
@@ -222,13 +222,13 @@
                     data-ajax-dialog>
                 {%- trans %}Customize list{% endtrans -%}
             </button>
-            <a class="i-button arrow js-dropdown js-enable-if-checked disabled hide-if-locked" data-toggle="dropdown">
+            <a href="#" class="i-button arrow js-dropdown js-enable-if-checked disabled hide-if-locked" data-toggle="dropdown">
                 {%- trans %}Assign{% endtrans -%}
             </a>
             <ul class="i-dropdown hide-if-locked">
                 {% if management %}
                     <li>
-                        <a class="js-requires-selected-row disabled"
+                        <a href="#" class="js-requires-selected-row disabled"
                            data-title="{% trans %}Assign judges to selected contributions{% endtrans %}"
                            data-href="{{ url_for('.assign_papers', event, role='judge') }}"
                            data-params-selector="#assignment-list input[name=contribution_id]:checked"
@@ -241,7 +241,7 @@
                 {% endif %}
                 {% if event.cfp.content_reviewing_enabled %}
                     <li>
-                        <a class="js-requires-selected-row disabled"
+                        <a href="#" class="js-requires-selected-row disabled"
                            data-title="{% trans %}Assign content reviewers to selected contributions{% endtrans %}"
                            data-href="{{ url_for('.assign_papers', event, role='content_reviewer') }}"
                            data-params-selector="#assignment-list input[name=contribution_id]:checked"
@@ -254,7 +254,7 @@
                 {% endif %}
                 {% if event.cfp.layout_reviewing_enabled %}
                     <li>
-                        <a class="js-requires-selected-row disabled"
+                        <a href="#" class="js-requires-selected-row disabled"
                            data-title="{% trans %}Assign layout reviewers to selected contributions{% endtrans %}"
                            data-href="{{ url_for('.assign_papers', event, role='layout_reviewer') }}"
                            data-params-selector="#assignment-list input[name=contribution_id]:checked"
@@ -266,13 +266,13 @@
                     </li>
                 {% endif %}
             </ul>
-            <a class="i-button arrow js-dropdown js-enable-if-checked disabled hide-if-locked" data-toggle="dropdown">
+            <a href="#" class="i-button arrow js-dropdown js-enable-if-checked disabled hide-if-locked" data-toggle="dropdown">
                 {%- trans %}Unassign{% endtrans -%}
             </a>
             <ul class="i-dropdown hide-if-locked">
                 {% if management %}
                     <li>
-                        <a class="js-requires-selected-row disabled"
+                        <a href="#" class="js-requires-selected-row disabled"
                            data-title="{% trans %}Unassign judges from selected contributions{% endtrans %}"
                            data-href="{{ url_for('.unassign_papers', event, role='judge') }}"
                            data-params-selector="#assignment-list input[name=contribution_id]:checked"
@@ -285,7 +285,7 @@
                 {% endif %}
                 {% if event.cfp.content_reviewing_enabled %}
                     <li>
-                        <a class="js-requires-selected-row disabled"
+                        <a href="#" class="js-requires-selected-row disabled"
                            data-title="{% trans %}Unassign content reviewers from selected contributions{% endtrans %}"
                            data-href="{{ url_for('.unassign_papers', event, role='content_reviewer') }}"
                            data-params-selector="#assignment-list input[name=contribution_id]:checked"
@@ -298,7 +298,7 @@
                 {% endif %}
                 {% if event.cfp.layout_reviewing_enabled %}
                     <li>
-                        <a class="js-requires-selected-row disabled"
+                        <a href="#" class="js-requires-selected-row disabled"
                            data-title="{% trans %}Unassign layout reviewers from selected contributions{% endtrans %}"
                            data-href="{{ url_for('.unassign_papers', event, role='layout_reviewer') }}"
                            data-params-selector="#assignment-list input[name=contribution_id]:checked"
@@ -310,13 +310,13 @@
                     </li>
                 {% endif %}
             </ul>
-            <a class="i-button arrow js-dropdown icon-hammer js-requires-selected-row disabled hide-if-locked"
+            <a href="#" class="i-button arrow js-dropdown icon-hammer js-requires-selected-row disabled hide-if-locked"
                data-toggle="dropdown">
                 {%- trans %}Judge{% endtrans -%}
             </a>
             <ul class="i-dropdown hide-if-locked">
                 <li>
-                    <a class="js-requires-selected-row js-dialog-action"
+                    <a href="#" class="js-requires-selected-row js-dialog-action"
                        data-href="{{ url_for('.judge_papers', event) }}"
                        data-title="{% trans %}Accept selected papers{% endtrans %}"
                        data-params-selector="#assignment-list input[name=contribution_id]:checked"
@@ -328,7 +328,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="js-requires-selected-row js-dialog-action"
+                    <a href="#" class="js-requires-selected-row js-dialog-action"
                        data-href="{{ url_for('.judge_papers', event) }}"
                        data-title="{% trans %}Reject selected papers{% endtrans %}"
                        data-params-selector="#assignment-list input[name=contribution_id]:checked"
@@ -340,7 +340,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="js-requires-selected-row js-dialog-action"
+                    <a href="#" class="js-requires-selected-row js-dialog-action"
                        data-href="{{ url_for('.judge_papers', event) }}"
                        data-title="{% trans %}Mark to be corrected selected papers{% endtrans %}"
                        data-params-selector="#assignment-list input[name=contribution_id]:checked"

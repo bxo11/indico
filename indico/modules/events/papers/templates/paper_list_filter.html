@@ -4,7 +4,7 @@
 {% macro _render_column_selector(item_id, item, filter_choices, is_static_item=false) %}
     {% set filters = filters['items'] if is_static_item else filters['fields'] %}
     <div class="label-group list-column">
-        <div class="i-label title-wrapper" data-id="{{ item_id }}">
+        <div class="i-label title-wrapper" data-id="{{ item_id }}" tabindex="0">
             <div class="title">{{ item.title }}</div>
             {% if item_id != 'unassigned' %}
                 <div class="actions">
@@ -14,7 +14,7 @@
         </div>
         {% if filter_choices %}
             <div class="i-label filter" {{ 'data-only-filter' if item_id == 'unassigned' }}>
-                <a class="icon-filter" data-toggle="dropdown"></a>
+                <a href="#" class="icon-filter" data-toggle="dropdown"></a>
                 <ul class="i-dropdown" style="display: none;">
                     {% for value, caption in filter_choices.items() %}
                         <li>
@@ -52,7 +52,7 @@
                 <li><a href="#" id="list-filter-select-all">{% trans %}All{% endtrans %}</a></li>
                 <li><a href="#" id="list-filter-select-none">{% trans %}None{% endtrans %}</a></li>
             </ul>
-            <a class="i-button js-reset-btn icon-close warning" type="button">
+            <a href="#" class="i-button js-reset-btn icon-close warning" type="button">
                 {%- trans %}Clear filters{% endtrans -%}
             </a>
         </div>

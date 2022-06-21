@@ -2,14 +2,14 @@
 
 {% block selection_toolbar %}
     <input type="checkbox" id="filter-judges" data-filter="judge" checked>
-    <label for="filter-judges" class="i-button">{% trans %}Judges{% endtrans %}</label>
+    <label for="filter-judges" class="i-button" tabindex="0" onkeydown="if(event.key==='Enter')event.target.click();">{% trans %}Judges{% endtrans %}</label>
     {% if event.cfp.content_reviewing_enabled %}
         <input type="checkbox" name="content-reviewers" id="filter-content" data-filter="content_reviewer" checked>
-        <label for="filter-content" class="i-button">{% trans %}Content reviewers{% endtrans %}</label>
+        <label for="filter-content" class="i-button" tabindex="0" onkeydown="if(event.key==='Enter')event.target.click();">{% trans %}Content reviewers{% endtrans %}</label>
     {% endif %}
     {% if event.cfp.layout_reviewing_enabled %}
         <input type="checkbox" name="layout-reviewers" id="filter-layout" data-filter="layout_reviewer" checked>
-        <label for="filter-layout" class="i-button">{% trans %}Layout reviewers{% endtrans %}</label>
+        <label for="filter-layout" class="i-button" tabindex="0" onkeydown="if(event.key==='Enter')event.target.click();">{% trans %}Layout reviewers{% endtrans %}</label>
     {% endif %}
 {% endblock %}
 
