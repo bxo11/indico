@@ -81,12 +81,24 @@ export default function ConditionInfo({fileTypes, condId, editableType, onUpdate
           name="pencil"
           onClick={() => setIsEditing(true)}
           disabled={disableActions}
+          onKeyPress={event => {
+            if (event.key === 'Enter') {
+              event.target.click();
+            }
+          }}
+          tabIndex={0}
         />
         <Icon
           color="red"
           name="trash"
           onClick={() => setIsDeleting(true)}
           disabled={disableActions}
+          onKeyPress={event => {
+            if (event.key === 'Enter') {
+              event.target.click();
+            }
+          }}
+          tabIndex={0}
         />
       </div>
       <RequestConfirmDelete

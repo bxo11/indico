@@ -165,6 +165,12 @@ export default function FileTypeManager({eventId, editableType}) {
                 onClick={() =>
                   canDelete(fileType) && dispatch({type: 'DELETE_FILE_TYPE', fileType})
                 }
+                onKeyPress={event => {
+                  if (event.key === 'Enter') {
+                    event.target.click();
+                  }
+                }}
+                tabIndex={0}
               />
             }
           />
@@ -174,6 +180,12 @@ export default function FileTypeManager({eventId, editableType}) {
             name="pencil"
             corner="top right"
             onClick={() => dispatch({type: 'EDIT_FILE_TYPE', fileType})}
+            onKeyPress={event => {
+              if (event.key === 'Enter') {
+                event.target.click();
+              }
+            }}
+            tabIndex={0}
           />
           <div styleName="filetype-header">
             <h3>

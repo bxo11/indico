@@ -110,6 +110,12 @@ export default function TagManager({eventId}) {
                     disabled={tag.system}
                     circular
                     inverted
+                    onKeyPress={event => {
+                      if (event.key === 'Enter') {
+                        event.target.click();
+                      }
+                    }}
+                    tabIndex={0}
                   />{' '}
                   <Icon
                     name="remove"
@@ -119,6 +125,12 @@ export default function TagManager({eventId}) {
                     disabled={tag.system}
                     circular
                     inverted
+                    onKeyPress={event => {
+                      if (event.key === 'Enter') {
+                        event.target.click();
+                      }
+                    }}
+                    tabIndex={0}
                   />
                 </span>
               }
