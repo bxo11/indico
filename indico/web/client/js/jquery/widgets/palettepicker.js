@@ -30,6 +30,7 @@
         var td = $('<td>', {
           class: 'palette-color',
           data: {color: color},
+          tabindex: '0',
         });
 
         var colorBox = $('<div>', {
@@ -57,7 +58,9 @@
         paletteTable.append(tr);
       }
 
-      paletteTable.on('click', '.palette-color', function() {
+      paletteTable.on('click keydown', '.palette-color', function(event) {
+        if (event.key!="Enter" && event.type!="click") return;
+
         var $this = $(this);
         var color = $this.data('color');
         var backgroundColor = '#' + color.background;
