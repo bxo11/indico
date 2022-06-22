@@ -10,7 +10,7 @@
                    href="{{ url_for('event_images.image_display', image, _external=true) }}"
                    data-clipboard-text="{{ url_for('event_images.image_display', image, _external=true) }}"
                    data-clipboard-action="copy"></a>
-                <a class="icon-remove danger delete hide-if-locked"
+                <a href="#" class="icon-remove danger delete hide-if-locked"
                    title="{% trans %}Delete image{% endtrans %}"
                    data-href="{{ url_for('event_layout.image_delete', image) }}"
                    data-method="DELETE"
