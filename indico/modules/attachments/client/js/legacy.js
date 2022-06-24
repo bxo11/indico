@@ -13,6 +13,9 @@
       // ignore if it comes from inside the action panel
       return;
     }
+    if (evt.key !== 'Enter' && evt.type !== 'click') {
+      return;
+    }
     $(this)
       .toggleClass('collapsed')
       .next('.sub-tree')
@@ -180,7 +183,7 @@
     }
 
     editor
-      .on('click', '.tree .expandable', toggleFolder)
+      .on('click keydown', '.tree .expandable', toggleFolder)
       .on('click', '.js-dialog-action', function(e) {
         e.preventDefault();
         const $this = $(this);
