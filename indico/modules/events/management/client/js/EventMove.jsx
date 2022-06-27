@@ -232,6 +232,7 @@ export function SingleEventMove({
               : Translate.string('Move event to another category')
           }
           onClick={!hasPendingMoveRequest ? fn : undefined}
+          href="#"
         />
       )
     : fn => (
