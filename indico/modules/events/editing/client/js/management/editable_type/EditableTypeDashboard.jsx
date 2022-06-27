@@ -93,7 +93,7 @@ export default function EditableTypeDashboard() {
               }
               description={Translate.string('Toggle whether users can submit new editables')}
             >
-              <a className="i-button highlight" onClick={toggleSubmission}>
+              <a href="#" className="i-button highlight" onClick={toggleSubmission}>
                 {submissionEnabled ? Translate.string('Close now') : Translate.string('Start now')}
               </a>
             </Section>
@@ -106,7 +106,7 @@ export default function EditableTypeDashboard() {
               }
               description={Translate.string('Toggle whether editors can review submissions')}
             >
-              <a className="i-button highlight" onClick={toggleEditing}>
+              <a href="#" className="i-button highlight" onClick={toggleEditing}>
                 {editingEnabled ? Translate.string('Close now') : Translate.string('Start now')}
               </a>
             </Section>
@@ -148,10 +148,14 @@ export default function EditableTypeDashboard() {
                 onClick={!anonymousTeamSaving ? toggleAnonymousTeam : null}
                 label={Translate.string('Keep editing team members anonymous')}
               />
-              <a className="i-button icon-mail" onClick={contactEditingTeam}>
+              <a href="#" className="i-button icon-mail" onClick={contactEditingTeam}>
                 <Translate>Contact</Translate>
               </a>
-              <a className="i-button icon-users" onClick={() => setEditorManagerVisible(true)}>
+              <a
+                href="#"
+                className="i-button icon-users"
+                onClick={() => setEditorManagerVisible(true)}
+              >
                 <Translate>Manage team</Translate>
               </a>
               {editorManagerVisible && (
@@ -177,6 +181,7 @@ export default function EditableTypeDashboard() {
                 <Translate>List</Translate>
               </Link>
               <a
+                href="#"
                 className="i-button icon-arrow-right-sparse"
                 onClick={() => setSelfAssignModalVisible(true)}
               >
