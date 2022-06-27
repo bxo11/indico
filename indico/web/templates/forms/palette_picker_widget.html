@@ -3,7 +3,7 @@
 {% block html %}
     {% set colors = field._value() %}
     <div class="group">
-        <a id="{{ field.id }}-palette-picker"
+        <a href="#" id="{{ field.id }}-palette-picker"
            class="i-button icon-expand palette-picker-trigger"
            style="background: #{{ colors.background }};
                   color: #{{ colors.text }} !important">
