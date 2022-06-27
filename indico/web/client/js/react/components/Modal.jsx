@@ -81,7 +81,11 @@ export default class Modal extends React.Component {
         {header && (
           <div className="modal-dialog-header flexrow f-j-space-between">
             {title && <h2 className="modal-dialog-title">{title}</h2>}
-            <a className="i-button text-color borderless icon-cross" onClick={this.close} />
+            <a
+              href="#"
+              className="i-button text-color borderless icon-cross"
+              onClick={this.close}
+            />
           </div>
         )}
         <div className="modal-overflow-container">
