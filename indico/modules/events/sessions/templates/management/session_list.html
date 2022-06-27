@@ -58,7 +58,8 @@
                        data-href="{{ url_for('.create_session', event) }}"
                        data-title="{% trans %}Add new session{% endtrans %}"
                        data-update="#sessions-wrapper"
-                       data-ajax-dialog>
+                       data-ajax-dialog
+                       href="#">
                         {% trans %}Add new session{% endtrans %}
                     </a>
                 </div>
@@ -70,7 +71,8 @@
                        data-params-selector="#sessions input[name=session_id]:checkbox:checked"
                        data-update="#sessions-wrapper"
                        data-href="{{ url_for('.delete_sessions', event) }}"
-                       data-confirm="{% trans %}Do you really want to delete the selected sessions?{% endtrans %}">
+                       data-confirm="{% trans %}Do you really want to delete the selected sessions?{% endtrans %}"
+                       href="#">
                         {%- trans %}Remove{% endtrans -%}
                     </a>
                 </div>
@@ -80,29 +82,34 @@
                        data-href="{{ url_for('.person_list', event) }}"
                        data-params-selector="#sessions input[name=session_id]:checkbox:checked"
                        data-method="POST"
-                       data-ajax-dialog>
+                       data-ajax-dialog
+                       href="#">
                         {%- trans %}Author list{% endtrans -%}
                     </a>
                 </div>
                 <div class="group">
                     <a class="i-button arrow js-requires-selected-row disabled js-dropdown"
-                       data-toggle="dropdown">
+                       data-toggle="dropdown"
+                       href="#">
                         {%- trans %}Export{% endtrans -%}
                     </a>
                     <ul class="i-dropdown">
                         <li>
                             <a data-href="{{ url_for('.export_pdf', event) }}"
-                               class="icon-file-pdf js-requires-selected-row js-submit-session-form disabled">
+                               class="icon-file-pdf js-requires-selected-row js-submit-session-form disabled"
+                               href="#">
                                 {%- trans %}PDF{% endtrans -%}
                             </a>
                         </li>
                         <li>
                             <a data-href="{{ url_for('.export_csv', event) }}"
-                               class="icon-file-spreadsheet js-requires-selected-row js-submit-session-form disabled">CSV</a>
+                               class="icon-file-spreadsheet js-requires-selected-row js-submit-session-form disabled"
+                               href="#">CSV</a>
                         </li>
                         <li>
                             <a data-href="{{ url_for('.export_excel', event) }}"
-                               class="icon-file-excel js-requires-selected-row js-submit-session-form disabled">XLSX (Excel)</a>
+                               class="icon-file-excel js-requires-selected-row js-submit-session-form disabled"
+                               href="#">XLSX (Excel)</a>
                         </li>
                     </ul>
                 </div>

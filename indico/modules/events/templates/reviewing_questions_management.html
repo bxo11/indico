@@ -3,7 +3,7 @@
 
 <div class="manage-reviewing-questions">
     <div class="toolbar space-after hide-if-locked">
-        <a class="i-button arrow icon-plus highlight" data-toggle="dropdown">
+        <a class="i-button arrow icon-plus highlight" data-toggle="dropdown" href="#">
             {%- trans %}Add new question{% endtrans -%}
         </a>
         <ul class="i-dropdown">
@@ -12,7 +12,8 @@
                     <a class="js-action-button"
                        data-href="{{ url_for(endpoints.create, event, field_type=name, **common_url_args) }}"
                        data-title="{% trans %}Add custom reviewing question{% endtrans %}"
-                       data-ajax-dialog>
+                       data-ajax-dialog
+                       href="#">
                         {{ field_type.friendly_name }}
                     </a>
                 </li>
@@ -26,7 +27,8 @@
                data-title="{% trans %}Edit custom field{% endtrans %}"
                data-href="{{ url_for(endpoints.edit, reviewing_question) }}"
                data-title="{% trans %}Edit the reviewing question{% endtrans %}"
-               data-ajax-dialog>
+               data-ajax-dialog
+               href="#">
             </a>
             <a class="js-delete-reviewing-question icon-remove hide-if-locked"
                data-method="DELETE"
@@ -34,7 +36,8 @@
                data-href="{{ url_for(endpoints.delete, reviewing_question) }}"
                data-title="{% trans %}Confirm deletion{% endtrans %}"
                data-confirm="{% trans %}Are you sure you want to delete the reviewing question?{% endtrans %}"
-               data-ajax-dialog>
+               data-ajax-dialog
+               href="#">
             </a>
         {% endcall %}
     {%- else -%}

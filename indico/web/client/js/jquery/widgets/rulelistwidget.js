@@ -144,7 +144,7 @@
         $element: $('<li>', {class: 'rule'}),
         rule: rule,
       };
-      var $removeButton = $('<a>', {class: 'i-link icon-remove rule-remove-button'});
+      var $removeButton = $('<a>', {class: 'i-link icon-remove rule-remove-button', href: '#'});
 
       ruleContext.$element
         .append(

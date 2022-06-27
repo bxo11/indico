@@ -41,7 +41,7 @@
                     </button>
                 </div>
                 <div class="group">
-                    <a class="i-button arrow icon-plus hide-if-locked" data-toggle="dropdown">
+                    <a class="i-button arrow icon-plus hide-if-locked" data-toggle="dropdown" href="#">
                         {% trans %}New{% endtrans %}
                     </a>
                     <ul class="i-dropdown">
@@ -52,7 +52,8 @@
                                data-href="{{ url_for('.manage_create_abstract', event) }}"
                                data-update='{"html": "#abstract-list", "filter_statistics": "#filter-statistics"}'
                                data-confirm-close-unsaved
-                               data-ajax-dialog>
+                               data-ajax-dialog
+                               href="#">
                                 {% trans %}Abstract{% endtrans %}
                             </a>
                         </li>
@@ -68,7 +69,8 @@
                                data-href="{{ url_for('.manage_create_abstract', event, invited=true) }}"
                                data-update='{"html": "#abstract-list", "filter_statistics": "#filter-statistics"}'
                                data-confirm-close-unsaved
-                               data-ajax-dialog>
+                               data-ajax-dialog
+                               href="#">
                                 {% trans %}Invited abstract{% endtrans %}
                             </a>
                         </li>
@@ -76,7 +78,8 @@
                 </div>
                 <div class="group hide-if-locked">
                     <a class="i-button arrow icon-remove js-requires-selected-row disabled"
-                       data-toggle="dropdown">
+                       data-toggle="dropdown"
+                       href="#">
                         {%- trans %}Remove{% endtrans -%}
                     </a>
                     <ul class="i-dropdown">
@@ -106,7 +109,8 @@
                 </div>
                 <div class="group hide-if-locked">
                     <a class="i-button arrow icon-hammer js-requires-selected-row disabled"
-                       data-toggle="dropdown">
+                       data-toggle="dropdown"
+                       href="#">
                         {%- trans %}Judge{% endtrans -%}
                     </a>
                     <ul class="i-dropdown">
@@ -179,7 +183,7 @@
                     </div>
                 {% endif %}
                 <div class="group">
-                    <a class="i-button arrow button js-requires-selected-row disabled" data-toggle="dropdown">
+                    <a class="i-button arrow button js-requires-selected-row disabled" data-toggle="dropdown" href="#">
                         {%- trans %}Export{% endtrans -%}
                     </a>
                     <ul class="i-dropdown">
@@ -209,14 +213,15 @@
                 </div>
                 {{ template_hook('abstract-list-options', event=event) }}
                 <div class="group">
-                    <a class="i-button button change-columns-width" title="{% trans %}Adapt columns width{% endtrans %}"></a>
+                    <a class="i-button button change-columns-width" title="{% trans %}Adapt columns width{% endtrans %}" href="#"></a>
                 </div>
             </div>
             <div class="toolbar">
                 <div class="group">
                     <a class="i-button icon-link js-static-url"
                        data-href="{{ url_for('.generate_static_url', event) }}"
-                       title="{% trans %}Generate a URL for the selected filters and columns.{% endtrans %}"></a>
+                       title="{% trans %}Generate a URL for the selected filters and columns.{% endtrans %}"
+                       href="#"></a>
                 </div>
                 <div class="group">
                     <div id="filter-statistics">

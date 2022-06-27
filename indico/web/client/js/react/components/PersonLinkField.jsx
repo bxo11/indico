@@ -53,6 +53,7 @@ const PersonListItem = ({
                 size="small"
                 color={active ? 'blue' : undefined}
                 onClick={() => onClickRole && onClickRole(idx, roles)}
+                href="#"
               >
                 {icon ? <Icon styleName="label-icon" name={icon} /> : label}
               </Label>
