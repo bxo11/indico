@@ -3,7 +3,7 @@
 
 <div class="manage-contribution-fields">
     <div class="toolbar space-after hide-if-locked">
-        <a class="i-button arrow icon-plus highlight" data-toggle="dropdown">
+        <a class="i-button arrow icon-plus highlight" data-toggle="dropdown" href="#">
             {%- trans %}Add new field{% endtrans -%}
         </a>
         <ul class="i-dropdown">
@@ -11,7 +11,8 @@
                 <li>
                     <a data-ajax-dialog class="js-action-button js-new-contribution-field"
                        data-href="{{ url_for('.create_field', event, field_type=form_type.name) }}"
-                       data-title="{% trans %}Add custom field{% endtrans %}">
+                       data-title="{% trans %}Add custom field{% endtrans %}"
+                       href="#">
                         {{ form_type.friendly_name }}
                     </a>
                 </li>
@@ -24,10 +25,12 @@
                                 id='contributions-fixed-fields', classes='tiles') %}
         <a class="icon-edit js-action-button hide-if-locked" data-ajax-dialog
            data-href="{{ url_for('.manage_description_field', event) }}"
-           data-title="{% trans %}Abstracts content{% endtrans %}"></a>
+           data-title="{% trans %}Abstracts content{% endtrans %}"
+           href="#"></a>
         <a class="js-delete-contribution-field icon-remove disabled hide-if-locked"
            title="{% trans %}This field cannot be deleted{% endtrans %}"
-           data-qtip-position="right"></a>
+           data-qtip-position="right"
+           href="#"></a>
     {% endcall %}
 
     {% if custom_fields %}
