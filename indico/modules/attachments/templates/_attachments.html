@@ -34,7 +34,7 @@
         </td>
         {% if management -%}
             <td class="actions hide-if-locked">
-                <a class="icon-edit js-dialog-action"
+                <a href="#" class="icon-edit js-dialog-action"
                    data-href="{{ url_for('attachments.modify_attachment', attachment) }}"
                    data-title="
                     {%- if attachment.type.name == 'file' -%}

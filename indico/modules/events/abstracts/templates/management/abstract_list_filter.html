@@ -4,7 +4,7 @@
 {% macro _render_column_selector(item_id, item, filter_choices, is_static_item=false) %}
     {% set filters = filters['items'] if is_static_item else filters['fields'] %}
     <div class="label-group list-column">
-        <div class="i-label title-wrapper" data-id="{{ item_id }}" tabindex="0">
+        <div class="i-label title-wrapper" data-id="{{ item_id }}">
             <div class="title">{{ item.title }}</div>
             <div class="actions">
                 <span class="visibility icon-eye"></span>

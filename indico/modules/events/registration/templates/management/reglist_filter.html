@@ -5,8 +5,7 @@
     {% set filter_title = item.get('filter_title', item.title) if is_static_item else item.title %}
     <div class="label-group list-column">
         <div class="i-label title-wrapper" {% if filter_only %}data-only-filter{% endif %}
-             data-id="{{ item.personal_data_type.name if item.personal_data_type else item_id }}"
-             tabindex="0">
+             data-id="{{ item.personal_data_type.name if item.personal_data_type else item_id }}">
             <div class="title">{{ filter_title }}</div>
             {% if not filter_only %}
                 <div class="actions">
