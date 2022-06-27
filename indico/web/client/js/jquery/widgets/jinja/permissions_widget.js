@@ -296,6 +296,7 @@ import Palette from 'indico/utils/palette';
         'data-principal': JSON.stringify(principal),
       });
       const $itemContent = $('<a>');
+      $itemContent.attr('href', '#');
       if (principal._type === 'EventRole' || principal._type === 'CategoryRole') {
         $itemContent.append(
           this._renderRoleCode(principal.code, principal.color).addClass('dropdown-icon')
@@ -467,13 +468,13 @@ import Palette from 'indico/utils/palette';
 
       // Manage adding users/groups to the acl
       const userSearchTrigger = triggerProps => (
-        <a className="i-button" {...triggerProps}>
+        <a href="#" className="i-button" {...triggerProps}>
           <Translate>User</Translate>
         </a>
       );
 
       const groupSearchTrigger = triggerProps => (
-        <a className="i-button" {...triggerProps}>
+        <a href="#" className="i-button" {...triggerProps}>
           <Translate>Group</Translate>
         </a>
       );
