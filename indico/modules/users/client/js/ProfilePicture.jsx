@@ -34,6 +34,7 @@ function ProfilePictureCard({image, text, email, children, source}) {
       color={active ? 'blue' : null}
       onClick={() => onChange(source)}
       style={active ? {backgroundColor: '#f5f5f5'} : null}
+      href="#"
     >
       <Card.Description>
         {image ? (

@@ -45,14 +45,16 @@
            data-href="{{ url_for('.create_track_group', event) }}"
            data-title="{% trans %}Add new track group{% endtrans %}"
            data-update="#track-list-container"
-           data-ajax-dialog>
+           data-ajax-dialog
+           href="#">
             {%- trans %}Add track group{% endtrans -%}
         </a>
         <a class="i-button highlight icon-plus hide-if-locked"
            data-href="{{ url_for('.create_track', event) }}"
            data-title="{% trans %}Add new track{% endtrans %}"
            data-update="#track-list-container"
-           data-ajax-dialog>
+           data-ajax-dialog
+           href="#">
             {%- trans %}Add track{% endtrans -%}
         </a>
     </div>
