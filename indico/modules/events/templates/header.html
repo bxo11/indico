@@ -73,7 +73,7 @@
         {%- endif -%}
     {%- endset -%}
 
-    <a class="i-button text-color subtle icon-filter filter-link {{ 'active' if filters_active }}"
+    <a href="#" class="i-button text-color subtle icon-filter filter-link {{ 'active' if filters_active }}"
        title="{{ filter_link_tooltip|forceescape }}"></a>
 
     <div id="event-filters" class="event-filters">
@@ -210,7 +210,7 @@
                      data-event-session-block-count="{{ event.session_block_count }}"></div>
 
                 {% if event.type == 'meeting' %}
-                    <a class="i-button text-color subtle icon-file-pdf" title="{% trans %}Export to PDF{% endtrans %}"
+                    <a href="#" class="i-button text-color subtle icon-file-pdf" title="{% trans %}Export to PDF{% endtrans %}"
                        data-href="{{ url_for('timetable.export_pdf', event) }}"
                        data-ajax-dialog></a>
                 {% endif %}
